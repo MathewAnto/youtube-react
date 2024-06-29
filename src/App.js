@@ -17,12 +17,6 @@ import vid7 from './img/vid7.png'
 import dp7 from './img/dp7.png'
 
 function App() {
-  // thumbnail
-  // dp
-  // Code Tetris: JavaScript Tutorial for Beginners
-  // freeCodeCamp.org
-  // 375K views
-  // 3 years ago
 
   const data = [
     {
@@ -34,7 +28,7 @@ function App() {
       siteLink: "https://www.youtube.com/@freecodecamp",
       views: "375K views",
       uptime: "3 years ago"
-    },
+      },
     {
       thumbnail: vid2,
       vidLink: "https://www.youtube.com/embed/J5j95RUSLd8?si=Ifuf8FnfxgbU7hSm?autoplay=1",

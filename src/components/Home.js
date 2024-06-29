@@ -47,7 +47,7 @@ export const Home = ({ data }) => {
     }
   };
 
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("all");
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
@@ -57,10 +57,12 @@ export const Home = ({ data }) => {
     "all",
     "CSS",
     "web development",
+    "full stack",
     "python",
     "entertainment",
-    "marvel",
+    "google",
     "javascript",
+    "MongoDB",
     "artificial intelligence",
     "machine learning",
     "trending",
@@ -71,11 +73,6 @@ export const Home = ({ data }) => {
     <>
       <div className="navbar">
         <div className="toggle-btn" onClick={toggleContent}>
-          {/* <a onClick={toggleContent}>
-            <span></span>
-            <span></span>
-            <span></span>
-          </a> */}
           <IoReorderThreeOutline id="toggleBtn"/>
         </div>
         <a href="https://www.youtube.com/" target="_blank">
@@ -287,7 +284,7 @@ export const Home = ({ data }) => {
           <div className="filter-options-container">
             {filterOptions.map((option) => (
               <button
-                // key={option}
+                key={option}
                 className={`filter-options ${
                   activeButton === option ? "active" : ""
                 }`}
@@ -305,13 +302,12 @@ export const Home = ({ data }) => {
         </button>
       </div>
 
-      <div className={isToggled ? 'video-container-wide' : 'video-container'}>
+      <div className={isToggled ? 'video-container video-container-wide' : 'video-container video-container-small'}>
         {data.map((data) => (
           <div className="videoDiv">
             <iframe
               src={data.vidLink}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
