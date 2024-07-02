@@ -282,9 +282,9 @@ export const Home = ({ data }) => {
         <div className="filter-opts" ref={scrollContainer}>
           
           <div className="filter-options-container">
-            {filterOptions.map((option) => (
+            {filterOptions.map((option, index) => (
               <button
-                key={option}
+                key={index}
                 className={`filter-options ${
                   activeButton === option ? "active" : ""
                 }`}
